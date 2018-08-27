@@ -38,13 +38,15 @@ fn main() {
         limit_count:2,
     };
 
-    let mut pool = LocalPool::new();
-    let mut spawner = pool.spawner();
-
-    spawner.spawn(reader);
-    spawner.spawn(writer);
-
-    pool.run(&mut spawner);
+//    let mut pool = LocalPool::new();
+//    let mut spawner = pool.spawner();
+//
+//    spawner.spawn(reader);
+//    spawner.spawn(writer);
+//
+//    pool.run(&mut spawner);
+    fahrenheit::spawn(reader);
+    fahrenheit::run(writer);
 }
 
 struct ReadLimited {
