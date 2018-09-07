@@ -25,6 +25,9 @@ use std::sync::Arc;
 mod async_tcp_stream;
 mod async_tcp_listener;
 
+#[macro_use]
+pub mod macros;
+
 pub use async_tcp_stream::AsyncTcpStream;
 pub use async_tcp_listener::AsyncTcpListener;
 
